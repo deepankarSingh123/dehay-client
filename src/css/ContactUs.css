@@ -1,0 +1,191 @@
+/* src/css/ContactUs.css */
+.contact-us {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-header h2 {
+  color: #662C90;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  color: #333333;
+  margin-bottom: 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 150px; /* Add gap to ensure space between contact methods and form */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.important {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.important h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.important p {
+  margin: 0;
+  color: #666666;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.method {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-right: 20px;
+}
+
+.method p {
+  margin: 0;
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold; /* Make the text bold */
+}
+
+.contact-form-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 400px; /* Set a fixed width for the form */
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-self: flex-start; /* Align form with the start of the contact methods */
+  margin-top: -240px; /* Align form to start from the "Contact us" heading */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Reduce margin for more compact spacing */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+}
+
+.form-control {
+  width: calc(100% - 20px);
+  padding: 10px 10px 10px 40px; /* Add space for the icon */
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 25px; /* Make input fields rounded */
+  background-color: #f0f0f0; /* Light background for inputs */
+  outline: none;
+  box-sizing: border-box
+}
+
+.form-control::placeholder {
+  color: #666666; /* Placeholder color */
+}
+
+.with-icon {
+  padding-left: 40px; /* Add space for the icon */
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 300px; /* Increase height for the message textarea */
+  padding: 10px;
+  border-radius: 25px; /* Make textarea rounded */
+  background-color: #f0f0f0; /* Light background for textarea */
+  outline: none;
+  box-sizing: border-box
+}
+
+button {
+  padding: 15px;
+  background-color: #662C90;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px; /* Make button rounded */
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #5a00b8;
+}
+
+.app-promo {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.app-promo h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.app-buttons img {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+}

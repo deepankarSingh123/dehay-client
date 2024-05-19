@@ -1,0 +1,19 @@
+/* src/css/AppPromo.css */
+.app-promo {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Santral-Regular", sans-serif;
+}
+
+.app-promo h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.app-buttons img {
+  width: 150px; /* Set the desired width */
+  height: 50px; /* Set the desired height */
+  object-fit: cover; /* Ensure the images scale correctly */
+  margin: 0 10px;
+}
