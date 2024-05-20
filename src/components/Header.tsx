@@ -2,13 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Header.css';
+import logo from '../images/logio.png'
 
 const Header: React.FC = () => {
   return (
     <header>
       <div className="header-container">
         <div className="logo">
-          <img src="logo.png" alt="Dehay Mobile Logo" />
+          <img src={logo} alt="Dehay Mobile Logo" />
         </div>
         <nav>
           <ul>

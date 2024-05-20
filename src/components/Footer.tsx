@@ -5,13 +5,14 @@ import facebook from '../images/fac.png'
 import twitter from '../images/tw.png'
 import youtube from '../images/yo.png'
 import insta from '../images/in.png'
+import logo from '../images/logio.png'
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="logo.png" alt="Dehay Mobile Logo" />
+          <img src={logo} alt="Dehay Mobile Logo" />
           <p>Stay connected to friends, family, and colleagues from anywhere in the world.</p>
           <div className="footer-social">
             <a href="https://facebook.com"><img src={facebook} alt="Facebook" /></a>
@@ -31,9 +32,8 @@ const Footer: React.FC = () => {
           <div className="footer-column">
             <h3>Community</h3>
             <ul>
-              <li><a href="/">Refer a Friend - Get Bonus</a></li>
+              <li><a href="/refer-a-friend">Refer a Friend - Get Bonus</a></li>
               <li><a href="/">Blog</a></li>
-              <li><a href="/">Become a Reseller</a></li>
             </ul>
           </div>
           <div className="footer-column">
@@ -42,7 +42,6 @@ const Footer: React.FC = () => {
               <li><a href="/about-us">About us</a></li>
               <li><a href="/support">FAQ</a></li>
               <li><a href="/contact-us">Contact Us</a></li>
-              <li><a href="/">Live chat</a></li>
             </ul>
           </div>
         </div>

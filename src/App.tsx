@@ -16,6 +16,7 @@ import Container from './components/Container';
 import './index.css';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
+import ReferAFriend from './components/ReferAFriend';
 
 const Home: React.FC = () => (
   <Container>
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/support" element={<Container><Support /></Container>} />
           <Route path="/privacy-policy" element={<Container><PrivacyPolicy /></Container>} />
           <Route path="/terms-and-conditions" element={<Container><TermsAndConditions /></Container>} />
+          <Route path="/refer-a-friend" element={<Container><ReferAFriend /></Container>} />
         </Routes>
         <AppPromo />
         <Footer />

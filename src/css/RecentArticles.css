@@ -1,12 +1,13 @@
 .recent-articles {
   padding: 40px;
   background-color: #f5f5f5;
-  font-family: "Santral-Regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .recent-articles h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .article-grid {
@@ -18,14 +19,17 @@
 
 .article-card {
   background-color: #ffffff;
-  padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.article-card.wide,
+.article-card.tall {
+  padding: 0;
 }
 
 .article-card.wide {
@@ -36,28 +40,72 @@
   grid-column: 2 / 3;
 }
 
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
 .article-card img {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  height: 100%;
+  object-fit: cover;
 }
 
-.article-card h3 {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.half-overlay .overlay {
+  width: 50%;
+}
+
+.full-overlay .overlay {
+  width: 100%;
+}
+
+.overlay-content {
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overlay h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-.article-card p {
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 20px;
+.overlay p {
+  font-size: 16px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.read-article {
-  color: #007bff;
+.overlay-content .read-article {
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
 }
+
 
 .see-all {
   display: block;
@@ -68,7 +116,6 @@
   font-weight: bold;
 }
 
-/* Adjust the second row to have equal columns */
 .article-grid .second-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -78,4 +125,27 @@
 
 .article-grid .second-row .article-card {
   grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.article-grid .second-row .article-card,
+.article-card.wide,
+.article-card.tall {
+  height: 100%;
+}
+
+.article-card .article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.article-card .article-content h3,
+.article-card .article-content p,
+.article-card .article-content .read-article {
+  margin: 0;
 }

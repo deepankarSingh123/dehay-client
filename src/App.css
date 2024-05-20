@@ -38,11 +38,18 @@
 }
 
 @font-face {
-  font-family: "Santral-Regular";
-  src: url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.eot");
-  src: url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/89b6f2d1098ac5bb207a808fb051ed53.svg#Santral-Regular") format("svg");
+/* fonts.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
 }
