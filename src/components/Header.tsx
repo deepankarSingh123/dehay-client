@@ -9,7 +9,9 @@ const Header: React.FC = () => {
     <header>
       <div className="header-container">
         <div className="logo">
+        <a href="/" >
           <img src={logo} alt="Dehay Mobile Logo" />
+          </a>
         </div>
         <nav>
           <ul>

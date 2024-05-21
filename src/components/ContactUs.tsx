@@ -3,7 +3,7 @@ import '../css/ContactUs.css';
 import callIcon from '../images/Call.png';
 import chatIcon from '../images/Chat Now.png';
 import faqIcon from '../images/faq.png';
-import locationIcon from '../images/location-icon.png';
+import locationIcon from '../images/Calling plans.png';
 
 const ContactUs: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const ContactUs: React.FC = () => {
               <p>Visit FAQ Page</p>
             </div>
             <div className="method">
-              <img src="locationIcon" alt="Location" className="contact-icon" />
+              <img src={locationIcon} alt="Location" className="contact-icon" />
               <p>10107 Jasper Avenue, Edmonton, Alberta T5J 1W8</p>
             </div>
           </div>

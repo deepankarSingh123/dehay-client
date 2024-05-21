@@ -25,11 +25,11 @@ const RecentArticles: React.FC = () => {
         </div>
         <div className="article-card tall">
           <div className="image-container full-overlay">
-            <img src={moneyTransfer} alt="Best money transfer apps 2023: sending funds made easy" />
+            <img src={moneyTransfer} alt="Best money transfer apps 2023: sending  funds made easy" />
             <div className="overlay">
               <div className="overlay-content">
-                <h3>Best money transfer apps 2023: sending funds made easy</h3>
-                <p>Millions of migrant workers, families, and businesses send money back home every month. In 2022 alone, $800 billion flowed through the accounts of migrant workers to support their loved ones.</p>
+                <h3>Best money transfer apps 2023: sending <br /> funds made easy</h3>
+                <p>Millions of migrant workers, families, and businesses <br /> send moneyback home every month. In 2022 alone,<br />  $800 billion flowed throughthe accounts of migrant <br />workers to support their loved ones.<br /><br /><br /></p>
                 <a href="/" className="read-article">Read Article &gt;</a>
               </div>
             </div>
@@ -41,7 +41,7 @@ const RecentArticles: React.FC = () => {
             <div className="article-content">
               <h3>Can a foreigner get a US driver's license: rules for non-citizens</h3>
               <p>The United States is undeniably a car-centric nation. Even though many major cities have subways, buses, and trams, Americans still rely primarily on cars to travel. Everyone can apply for a driver's license when they reach the age of 16.</p>
-              <a href="/" className="read-article">Read Article &gt;</a>
+              <a href="/" className="read-article second-row-button">Read Article &gt;</a>
             </div>
           </div>
           <div className="article-card">
@@ -49,7 +49,7 @@ const RecentArticles: React.FC = () => {
             <div className="article-content">
               <h3>How to make international money transfers with PayPal</h3>
               <p>Sending money across international borders has become a routine necessity for many, and technology continues to simplify the process. Today, you can send money internationally through various platforms, and PayPal is one of those options. However, questions about PayPal international fees often arise.</p>
-              <a href="/" className="read-article">Read Article &gt;</a>
+              <a href="/" className="read-article second-row-button">Read Article &gt;</a>
             </div>
           </div>
           <div className="article-card">
@@ -57,12 +57,11 @@ const RecentArticles: React.FC = () => {
             <div className="article-content">
               <h3>How do I get a refund on PayPal?</h3>
               <p>Did you receive a faulty, mismatched, or non-existent product after an online purchase? Most would rather not deal with such issues, but they can happen.</p>
-              <a href="/" className="read-article">Read Article &gt;</a>
+              <a href="/" className="read-article second-row-button">Read Article &gt;</a>
             </div>
           </div>
         </div>
       </div>
-      <a href="/" className="see-all">See All &gt;</a>
     </section>
   );
 };

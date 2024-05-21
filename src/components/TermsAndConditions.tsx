@@ -3,7 +3,7 @@ import "../css/TermsAndConditions.css";
 
 const TermsAndConditions: React.FC = () => {
   return (
-    <div className="terms-and-conditions">
+    <div className="privacy-policy-container">
       <h1>Terms of Use for Telecommunication Products and Services</h1>
       <p>
         Welcome to DehayMobile, Inc. and its affiliated companies (“we” or

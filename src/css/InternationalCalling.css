@@ -1,51 +1,151 @@
-.international-calling {
-    padding: 40px;
-    background-color: #f5f5f5;
-  }
-  
-  .international-calling h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .calling-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .calling-text {
-    flex: 1;
-    margin-right: 40px;
-  }
-  
-  .calling-text p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .calling-text ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .calling-text button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .calling-image {
-    flex: 1;
-  }
-  
-  .calling-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
+.recent-articles {
+  padding: 40px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.recent-articles h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.article-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  overflow: hidden;
+}
+
+.article-card.wide,
+.article-card.tall {
+  padding: 0;
+}
+
+.article-card.wide {
+  grid-column: 1 / 2;
+}
+
+.article-card.tall {
+  grid-column: 2 / 3;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #662c909c;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.half-overlay .overlay1 {
+  width: 50%;
+}
+
+.full-overlay .overlay1 {
+  width: 100%;
+}
+
+.overlay-content {
+  max-height: 100%;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 16px;
+  margin-bottom: 120px; /* Adjust the margin-bottom to create space for the button */
+}
+
+.read-article {
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.read-article.second-row-button {
+  color: #000000;
+  margin-top: 10px;
+}
+
+.see-all {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article-grid .second-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: span 2;
+  gap: 20px;
+}
+
+.article-grid .second-row .article-card {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.article-grid .second-row .article-card,
+.article-card.wide,
+.article-card.tall {
+  height: 100%;
+}
+
+.article-card .article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+}
+
+.article-card .article-content h3,
+.article-card .article-content p,
+.article-card .article-content .read-article {
+  margin: 0;
+}

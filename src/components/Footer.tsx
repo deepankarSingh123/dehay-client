@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={logo} alt="Dehay Mobile Logo" />
+          <a href="/"><img src={logo} alt="Dehay Mobile Logo" /></a>
           <p>Stay connected to friends, family, and colleagues from anywhere in the world.</p>
           <div className="footer-social">
             <a href="https://facebook.com"><img src={facebook} alt="Facebook" /></a>

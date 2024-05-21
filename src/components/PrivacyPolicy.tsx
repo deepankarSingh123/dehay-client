@@ -5,7 +5,7 @@ import '../css/PrivacyPolicy.css';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="privacy-policy">
+    <div className="privacy-policy-container">
       <h1>Privacy Policy</h1>
       <p>
         The purpose of this privacy charter (hereinafter referred to as the “Charter”) is to describe the terms
