@@ -1,12 +1,12 @@
-/* src/css/ContactUs.css */
 .contact-us {
   background-color: #ffffff;
   padding: 40px 20px;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .contact-header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 40px;
   max-width: 1200px;
   margin-left: auto;
@@ -20,23 +20,23 @@
 }
 
 .contact-header h1 {
-  font-size: 48px;
+  font-size: 28px;
   color: #333333;
   margin-bottom: 0;
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 150px; /* Add gap to ensure space between contact methods and form */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: flex-start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .important {
@@ -44,6 +44,8 @@
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  max-width: 100%;
+  text-align: left;
 }
 
 .important h3 {
@@ -59,8 +61,9 @@
 
 .contact-methods {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
+  width: 100%;
 }
 
 .method {
@@ -70,10 +73,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .contact-icon {
-  width: 40px; /* Adjust size as needed */
+  width: 40px;
   height: 40px;
   margin-right: 20px;
 }
@@ -82,23 +86,21 @@
   margin: 0;
   font-size: 16px;
   color: #333333;
-  font-weight: bold; /* Make the text bold */
+  font-weight: bold;
 }
 
 .contact-form-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .contact-form {
   width: 100%;
-  max-width: 400px; /* Set a fixed width for the form */
+  max-width: 400px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  align-self: flex-start; /* Align form with the start of the contact methods */
-  margin-top: -240px; /* Align form to start from the "Contact us" heading */
 }
 
 .contact-form form {
@@ -107,7 +109,7 @@
 }
 
 .form-group {
-  margin-bottom: 20px; /* Reduce margin for more compact spacing */
+  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -126,37 +128,37 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px; /* Adjust size as needed */
+  width: 20px;
   height: 20px;
 }
 
 .form-control {
-  width: calc(100% - 20px);
-  padding: 10px 10px 10px 40px; /* Add space for the icon */
+  width: 100%;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #cccccc;
-  border-radius: 25px; /* Make input fields rounded */
-  background-color: #f0f0f0; /* Light background for inputs */
+  border-radius: 25px;
+  background-color: #f0f0f0;
   outline: none;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .form-control::placeholder {
-  color: #666666; /* Placeholder color */
+  color: #666666;
 }
 
 .with-icon {
-  padding-left: 40px; /* Add space for the icon */
+  padding-left: 40px;
 }
 
 .form-group textarea {
   resize: vertical;
-  height: 300px; /* Increase height for the message textarea */
+  height: 300px;
   padding: 10px;
-  border-radius: 25px; /* Make textarea rounded */
-  background-color: #f0f0f0; /* Light background for textarea */
+  border-radius: 25px;
+  background-color: #f0f0f0;
   outline: none;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 button {
@@ -164,7 +166,7 @@ button {
   background-color: #662C90;
   color: #ffffff;
   border: none;
-  border-radius: 25px; /* Make button rounded */
+  border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
   width: 100%;
@@ -174,18 +176,27 @@ button:hover {
   background-color: #5a00b8;
 }
 
-.app-promo {
-  text-align: center;
-  margin-top: 40px;
+@media (min-width: 768px) {
+  .contact-header h1 {
+    font-size: 36px;
+  }
+
+  .contact-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.app-promo h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+@media (min-width: 1024px) {
+  .contact-header h1 {
+    font-size: 48px;
+  }
 
-.app-buttons img {
-  width: 150px;
-  height: auto;
-  margin: 0 10px;
+  .contact-content {
+    gap: 150px;
+  }
 }

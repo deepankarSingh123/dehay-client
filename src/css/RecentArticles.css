@@ -149,3 +149,21 @@
 .article-card .article-content .read-article {
   margin: 0;
 }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .article-card.wide,
+  .article-card.tall {
+    grid-column: 1 / -1;
+  }
+
+  .article-grid .second-row {
+    grid-template-columns: 1fr;
+  }
+}

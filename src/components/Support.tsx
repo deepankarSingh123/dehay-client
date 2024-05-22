@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Support.css';
 import internationalCallingIcon from '../images/International Calling.png'
 import mobileTopUpIcon from '../images/Mobile Top-Up.png'
-import myAccountIcon from '../images/International Calling.png'
+// import myAccountIcon from '../images/International Calling.png'
 import otherServicesIcon from '../images/Other Services.png'
 import contactUsIcon from '../images/fgd.png'
 
@@ -38,7 +38,7 @@ const Support: React.FC = () => {
           <div>
             <h3>Contact us</h3>
             <p>
-              Can't find your answer? If you need help, don't sweat it. <a href="/contact">Contact us</a> and we'll get back to you as soon as we can.
+              Can't find your answer? If you need help, don't sweat it. <a href="/contact-us">Contact us</a> and we'll get back to you as soon as we can.
             </p>
           </div>
         </div>

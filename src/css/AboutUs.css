@@ -1,4 +1,3 @@
-/* src/css/AboutUs.css */
 .about-us {
   background-color: #ffffff;
   padding: 40px 20px;
@@ -9,68 +8,57 @@
 .about-header {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .about-header h1 {
-  font-size: 56px;
+  font-size: 36px;
   color: #000000;
 }
 
 .about-header p {
-  font-size: 28px;
+  font-size: 18px;
   color: #662C90;
   margin-bottom: 24px;
 }
 
 .signup-button {
-  padding: 20px 40px;
+  padding: 12px 24px;
   background-color: #662C90;
   color: #ffffff;
   border: none;
-  border-radius: 30px; /* Adjust border-radius for a rounded look */
+  border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  width: auto; /* Ensure the button width is auto */
-  display: inline-block; /* Ensure the button fits its content */
-  margin-top: 20px; /* Add margin to separate it from the text above */
+  margin-top: 20px;
 }
 
 .signup-button:hover {
   background-color: #5a00b8;
 }
 
-.about-content {
+.about-content, .borders-content, .statistics, .services-cards, .questions-cards {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 40px auto;
 }
 
-.about-text {
-  flex: 1;
+.about-content {
   text-align: left;
-  padding-right: 40px;
 }
 
-.about-text h2 {
-  font-size: 36px;
-  color: #333333;
-  margin-bottom: 20px;
+.about-text, .borders-text {
+  padding: 0 20px;
 }
 
-.about-text p {
-  font-size: 16px;
-  color: #666666;
-  margin-bottom: 20px;
+.about-image, .borders-image {
+  text-align: center;
 }
 
-.about-image {
-  flex: 1;
-}
-
-.about-image img {
+.about-image img, .borders-image img, .stat-card img, .service-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -78,17 +66,19 @@
 
 .image-with-circle {
   position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 0 auto 40px auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto 40px;
 }
 
 .circle-background {
   position: absolute;
   top: 50%;
-  left: 45%;
-  width: 400px;
-  height: 400px;
+  left: 50%;
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
   background-color: #662C90;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -97,143 +87,42 @@
 
 .phone-image {
   position: absolute;
-  width: 250px;
+  width: 50%;
   height: auto;
   z-index: 1;
+  top: 25%;
 }
 
-.phone-image:first-child {
-  left: 50px; /* Adjust positioning */
-  top: 20px;
-  
-}
-
-.phone-image:last-child {
-  right: 50px; /* Adjust positioning */
-  top: 20px;
-  
-}
-
-.removing-borders {
+.removing-borders, .our-services, .still-have-questions {
   background-color: #ffffff;
   padding: 40px 20px;
 }
 
-.borders-content {
-  display: flex;
+.statistics, .services-cards, .questions-cards {
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 40px auto;
 }
 
-.borders-image {
-  flex: 1;
-  text-align: center;
-}
-
-.borders-image img {
-  width: 100%;
-  height: auto;
-}
-
-.borders-text {
-  flex: 1;
-  text-align: left;
-  padding-left: 40px;
-}
-
-.borders-text h2 {
-  font-size: 36px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-
-.borders-text p {
-  font-size: 16px;
-  color: #666666;
-  margin-bottom: 20px;
-}
-
-.statistics {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.stat-card {
-  flex: 1;
+.stat-card, .service-card, .question-card {
+  flex: 1 1 calc(100% - 40px);
+  max-width: calc(100% - 40px);
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+  margin: 10px;
 }
 
-.stat-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.stat-card h3 {
+.stat-card h3, .service-card h3 {
   font-size: 24px;
   color: #333333;
   margin-bottom: 10px;
 }
 
-.stat-card p {
+.stat-card p, .service-card p, .question-card p {
   font-size: 14px;
   color: #666666;
-}
-
-.our-services {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-}
-
-.our-services h2 {
-  font-size: 36px;
-  color: #333333;
-  margin-bottom: 40px;
-}
-
-.services-cards {
-  display: flex;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: left;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 45%;
-}
-
-.service-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 24px;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 16px;
-  color: #666666;
-  margin-bottom: 20px;
 }
 
 .learn-more {
@@ -244,43 +133,56 @@
   margin-top: 10px;
 }
 
-.still-have-questions {
-  background-color: #ffffff;
-  padding: 40px 20px;
-}
-
 .still-have-questions h2 {
   font-size: 36px;
   color: #000000;
   margin-bottom: 40px;
 }
 
-.questions-cards {
-  display: flex;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.question-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 30%;
-}
-
 .question-card img {
-  width: 48px; /* Adjust size as needed */
+  width: 48px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.question-card p {
-  font-size: 16px;
-  color: #000000;
-  margin-bottom: 0;
-  font-weight: bold; /* Ensure text is bold */
+@media (min-width: 768px) {
+  .about-header h1 {
+    font-size: 48px;
+  }
+
+  .about-header p {
+    font-size: 24px;
+  }
+
+  .about-content, .borders-content, .statistics, .services-cards, .questions-cards {
+    flex-direction: row;
+  }
+
+  .about-text, .borders-text {
+    padding: 0 40px;
+  }
+
+  .stat-card, .service-card, .question-card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+
+  .phone-image {
+    width: 250px;
+  }
 }
 
+@media (min-width: 1024px) {
+  .about-header h1 {
+    font-size: 56px;
+  }
+
+  .about-header p {
+    font-size: 28px;
+  }
+
+  .stat-card, .service-card, .question-card {
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+  }
+}

@@ -11,7 +11,7 @@ import aboutusmobile from '../images/aboutus-mobile.png'
 import aboutusinternat from '../images/aboutus-internat.png'
 import faqIcon from '../images/faq.png'
 import callIcon from '../images/Call.png'
-import chatIcon from '../images/Chat Now.png'
+// import chatIcon from '../images/Chat Now.png'
 
 
 
@@ -22,7 +22,7 @@ const AboutUs: React.FC = () => {
         <h1>About DEHAY MOBILE</h1>
         <p>DEHAY Mobile is more than an app. It’s about connecting people.<br />
            We provide cheap international calls to mobiles and <br /> landlines, from anywhere in the world.</p>
-        <button className="signup-button">Signup</button>
+        {/* <button className="signup-button">Signup</button> */}
       </div>
       <div className="about-content">
         <div className="about-text">
@@ -132,10 +132,10 @@ const AboutUs: React.FC = () => {
             <img src={callIcon} alt="Call" className="question-icon" />
             <p>Call +1-780-938-3515</p>
           </div>
-          <div className="question-card">
+          {/* <div className="question-card">
             <img src={chatIcon} alt="Chat" className="question-icon" />
             <p>Chat Now</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
