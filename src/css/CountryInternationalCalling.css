@@ -1,0 +1,472 @@
+body, .container {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto; /* Center the container */
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.expandable {
+  display: inline-block;
+  width: 300px;
+  position: relative;
+}
+
+.expandable-btn {
+  background-color: #f8f8f8;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 30px;  /* Increased border-radius for a pill-like effect */
+  width: 100%;
+  text-align: center;  /* Center text alignment */
+  color: black;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;}
+
+.expandable-btn:hover {
+  color: white;
+  background-color: #662C90;
+  transform: scale(1.05); }
+
+.expandable-content {
+  background-color: white;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);  /* Deeper shadow for more depth */
+  z-index: 1;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 10px;  /* More rounded */
+  margin-top: 5px;
+  position: absolute;
+}
+
+.expandable-content .expandable-item {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.expandable-content .expandable-item:hover {
+  background-color: #f1f1f1;
+}
+
+.flag {
+  margin-right: 10px;
+}
+
+.name {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.code {
+  margin-left: 10px;
+}
+
+.app-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+.app-image {
+  width: 450px;
+  margin-right: 100px;
+}
+
+.app-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.app-header h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  font-size: 1.2em;
+}
+
+.app-features {
+  text-align: left;
+  margin-bottom: 20px;
+  flex-basis: 60%;
+}
+
+.app-features h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feature {
+  background-color: white;
+  padding: 10px 20px; 
+  /* margin: 10px 0; */
+  border-radius: 5px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px); /* Adjust width */
+  max-width: 500px; /* Maximum width for better alignment */
+}
+
+.feature h4 {
+  font-size: 1.5em;
+  width: 100px;
+}
+
+.feature p {
+  font-size: 1.1em;
+  margin-left: 50px;
+}
+
+.app-download {
+  text-align: left;
+  display: flex; /* Changed to flex layout */
+  flex-direction: row; /* Horizontal alignment */
+  justify-content: left; /* Center the images */
+  align-items: center; /* Align items in the center */
+  gap: 10px; /* Adjust the gap between images */
+  margin-top: 20px;
+}
+
+.app-download img {
+  margin: 0px;
+  height: 50px;
+}
+
+.phone-image-section {
+  flex-basis: 35%;
+  text-align: center;
+}
+
+.phone-image-right {
+  width: 445px;
+  margin-top: 100px; /* Adjust width as needed */
+}
+
+
+.benefits-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.benefits-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.benefits-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 30%; /* Ensure three cards fit in a row */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.benefit-icon {
+  margin-bottom: 15px;
+}
+
+.benefit-icon img {
+  width: 60px; /* Adjust icon size as needed */
+}
+
+.benefit-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 1.1em;
+}
+
+.testimonials-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.testimonials-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Add gap between cards */
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 30%; /* Ensure three cards fit in a row */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.testimonial-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #FFD700; /* Gold color for stars */
+  margin-bottom: 10px;
+}
+
+.faq-section {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.faq-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.contact-us-btn, .faq-btn {
+  padding: 10px 10px; /* Smaller button size */
+  font-size: 16px; /* Smaller font size */
+  color: #ffffff;
+  background-color: #662C90;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.contact-us-btn:hover, .faq-btn:hover {
+  background-color: #8d5eaf;
+}
+
+.faq-accordion {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: #f8f8f8;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.faq-question.active {
+  background-color: #662C90;
+  color: white;
+}
+
+.faq-answer {
+  padding: 15px;
+  font-size: 1em;
+  display: none;
+}
+
+.faq-item .faq-question.active + .faq-answer {
+  display: block;
+}
+
+.faq-icon {
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+
+  .app-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-info {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .app-image {
+    margin: 0 0 20px 0;
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .app-text {
+    text-align: center;
+  }
+
+  .app-features {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+  
+
+  .app-download {
+    flex-direction: column;
+  }
+
+  .app-download img {
+    height: 40px;
+    margin: 10px 0;
+  }
+  
+
+  .phone-image-right {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+  .faq-section h2 {
+    font-size: 2em;
+  }
+
+  .faq-section p {
+    font-size: 1em;
+  }
+
+  .faq-question {
+    font-size: 1em;
+  }
+
+  .faq-answer {
+    font-size: 0.9em;
+  }
+
+  .contact-us-btn, .faq-btn {
+    width: auto; /* Adjust width for mobile */
+  }
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .expandable-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .expandable-content .expandable-item {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .app-header h2 {
+    font-size: 2em;
+  }
+
+  .app-header p {
+    font-size: 1em;
+  }
+
+  .app-features h3 {
+    font-size: 1.5em;
+  }
+
+  .feature h4 {
+    font-size: 1.2em;
+  }
+
+  .feature p {
+    font-size: 1em;
+  }
+  .benefits-section h2 {
+    font-size: 2em;
+  }
+
+}

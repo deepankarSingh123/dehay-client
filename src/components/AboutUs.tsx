@@ -1,4 +1,3 @@
-// src/components/AboutUs.tsx
 import React from 'react';
 import '../css/AboutUs.css';
 import aboutusimg1 from '../images/about-us-img1.png'
@@ -11,9 +10,7 @@ import aboutusmobile from '../images/aboutus-mobile.png'
 import aboutusinternat from '../images/aboutus-internat.png'
 import faqIcon from '../images/faq.png'
 import callIcon from '../images/Call.png'
-// import chatIcon from '../images/Chat Now.png'
-
-
+import chatIcon from '../images/Chat Now.png'
 
 const AboutUs: React.FC = () => {
   return (
@@ -25,7 +22,7 @@ const AboutUs: React.FC = () => {
         {/* <button className="signup-button">Signup</button> */}
       </div>
       <div className="about-content">
-        <div className="about-text">
+        <div className="about-text1">
           <h2>Who We Are</h2>
           <p>
             Dehay Mobile is a team of dedicated professionals who care about keeping people connected. Quality is at the heart of what we do. The desire to help people connect with friends and loved ones around the world is what drives us every day.
@@ -132,10 +129,10 @@ const AboutUs: React.FC = () => {
             <img src={callIcon} alt="Call" className="question-icon" />
             <p>Call +1-780-938-3515</p>
           </div>
-          {/* <div className="question-card">
+          <div className="question-card">
             <img src={chatIcon} alt="Chat" className="question-icon" />
             <p>Chat Now</p>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

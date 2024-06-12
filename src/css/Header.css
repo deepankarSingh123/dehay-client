@@ -1,6 +1,6 @@
 header {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px 20px; /* Reduce padding for a smaller overall size */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -14,8 +14,9 @@ header {
 }
 
 .logo img {
-  width: 120px;
+  width: 100px; /* Reduce the logo size */
   height: auto;
+  padding-top: 10px;
 }
 
 nav ul {
@@ -26,19 +27,56 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px;
+  position: relative;
+  margin-right: 30px; /* Increase spacing between nav items */
 }
 
-nav ul li a {
+nav ul li a, .nav-link {
   color: #333333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px; /* Reduce font size */
   font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.language {
+  margin-right: 15px; /* Add spacing to the right of the language selector */
 }
 
 .language select {
-  padding: 8px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 12px; /* Reduce font size */
   border-radius: 4px;
 }
 
@@ -47,15 +85,39 @@ nav ul li a {
   align-items: center;
 }
 
+.auth-buttons .login-button {
+  color: #333333;
+  border: 1px solid #333333;
+  padding: 10px 20px; /* Increase padding for a bigger button */
+  border-radius: 30px; /* Increase border-radius for a bigger button */
+  text-decoration: none;
+  margin-right: 10px; /* Add spacing between buttons */
+  font-size: 14px; /* Keep font size the same */
+}
+
+.auth-buttons .join-button {
+  background-color: #662C90;
+  color: #ffffff;
+  padding: 10px 20px; /* Increase padding for a bigger button */
+  border-radius: 30px; /* Increase border-radius for a bigger button */
+  text-decoration: none;
+  font-size: 14px; /* Keep font size the same */
+}
+
+.auth-language-container {
+  display: flex;
+  align-items: center;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-left: auto; /* Ensure the menu toggle button is on the right */
+  margin-left: auto;
 }
 
 .menu-toggle .bar {
-  width: 25px;
+  width: 20px; /* Adjust the width for a smaller icon */
   height: 3px;
   background-color: #333333;
   margin: 4px 0;
@@ -91,14 +153,22 @@ nav ul li a {
     margin: 10px 0;
   }
 
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 0; /* Remove padding */
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 0; /* Adjust padding */
+  }
+
   .menu-toggle {
     display: flex;
   }
 
-  .auth-buttons {
-    display: none;
-  }
-
+  .auth-buttons,
   .language {
     display: none;
   }
@@ -106,19 +176,20 @@ nav ul li a {
 
 @media (max-width: 480px) {
   .logo img {
-    width: 100px;
+    width: 80px; /* Reduce the logo size further for smaller screens */
   }
 
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px; /* Reduce font size for smaller screens */
   }
 
   .language select {
-    font-size: 12px;
+    font-size: 10px; /* Reduce font size for smaller screens */
   }
 
-  .auth-buttons button {
-    font-size: 14px;
-    padding: 8px 16px;
+  .auth-buttons .login-button,
+  .auth-buttons .join-button {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller buttons */
   }
 }

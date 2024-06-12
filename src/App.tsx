@@ -17,6 +17,11 @@ import './index.css';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import ReferAFriend from './components/ReferAFriend';
+import LoginPage from './components/LoginPage'; // Import the new LoginPage component
+import OTPPage from './components/OTPPage';
+import CountryInternationalCalling from './components/CountryInternationalCalling';
+import Services from './components/Services';
+import MobileTopUpService from './components/MobileTopUpService';
 
 const Home: React.FC = () => (
   <Container>
@@ -32,18 +37,32 @@ const App: React.FC = () => {
   return (
     <Router>
       <div>
-        <Header />
         <Routes>
-          <Route path="/" element={<Container><Home /></Container>} />
-          <Route path="/contact-us" element={<Container><ContactUs /></Container>} />
-          <Route path="/about-us" element={<Container><AboutUs /></Container>} />
-          <Route path="/support" element={<Container><Support /></Container>} />
-          <Route path="/privacy-policy" element={<Container><PrivacyPolicy /></Container>} />
-          <Route path="/terms-and-conditions" element={<Container><TermsAndConditions /></Container>} />
-          <Route path="/refer-a-friend" element={<Container><ReferAFriend /></Container>} />
+        <Route path="/login" element={<LoginPage />} />
+          <Route path="/otp" element={<OTPPage />} />
+          <Route 
+            path="*" 
+            element={
+              <>
+                <Header />
+                <Routes>
+                  <Route path="/" element={<Container><Home /></Container>} />
+                  <Route path="/contact-us" element={<Container><ContactUs /></Container>} />
+                  <Route path="/about-us" element={<Container><AboutUs /></Container>} />
+                  <Route path="/support" element={<Container><Support /></Container>} />
+                  <Route path="/privacy-policy" element={<Container><PrivacyPolicy /></Container>} />
+                  <Route path="/terms-and-conditions" element={<Container><TermsAndConditions /></Container>} />
+                  <Route path="/refer-a-friend" element={<Container><ReferAFriend /></Container>} />
+                  <Route path="/country-international-calling" element={<Container><CountryInternationalCalling /></Container>} />
+                  <Route path="/services" element={<Container><Services /></Container>} />
+                  <Route path="/mobile-topup" element={<Container><MobileTopUpService /></Container>} />
+                </Routes>
+                <AppPromo />
+                <Footer />
+              </>
+            } 
+          />
         </Routes>
-        <AppPromo />
-        <Footer />
       </div>
     </Router>
   );

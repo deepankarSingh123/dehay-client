@@ -1,0 +1,88 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+  }
+  
+  .login-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333333;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .country-code {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    width: 120px;
+  }
+  
+  .phone-input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    width: calc(100% - 130px);
+  }
+  
+  .submit-button {
+    padding: 15px 20px;
+    background-color: #ffffff; /* Idle background color */
+    color: #662C90; /* Idle text color */
+    border: 2px solid #662C90; /* Border color */
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .submit-button:hover {
+    background-color: #662C90; /* Hover background color */
+    color: #ffffff; /* Hover text color */
+  }  
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 20px;
+    }
+  
+    .submit-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  

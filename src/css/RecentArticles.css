@@ -1,5 +1,5 @@
 .recent-articles {
-  padding: 40px;
+  padding: 40px 20px;
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
@@ -150,20 +150,96 @@
   margin: 0;
 }
 
+.recent-articles.mobile {
+  padding: 20px 10px;
+}
+
+.article-grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.article-grid-mobile .article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
+
+.article-grid-mobile .article-card img {
+  width: 100%;
+  height: auto;
+}
+
+.article-grid-mobile .article-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.article-grid-mobile .article-content {
+  flex-grow: 1; /* Allow the content to take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the content */
+}
+
+.article-grid-mobile .read-article {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto;  /* Push the link to the bottom */
+  align-self: flex-start;
+}
 
 /* Responsive styles */
+@media (min-width: 769px) {
+  .recent-articles.mobile {
+    display: none;
+  }
+
+  .recent-articles.desktop {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
-  .article-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .recent-articles.desktop {
+    display: none;
   }
 
-  .article-card.wide,
-  .article-card.tall {
-    grid-column: 1 / -1;
+  .recent-articles.mobile {
+    display: block;
   }
 
-  .article-grid .second-row {
-    grid-template-columns: 1fr;
+  .overlay p {
+    display: none; /* Hide the paragraph text on smaller devices */
+  }
+
+  .overlay h3 {
+    font-size: 18px; /* Adjust title size for smaller devices */
+  }
+
+  .read-article {
+    font-size: 14px; /* Adjust button text size for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-articles h2 {
+    font-size: 20px;
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .overlay p {
+    display: none; /* Hide the paragraph text on smaller devices */
+  }
+
+  .read-article {
+    font-size: 12px; /* Adjust button text size for smaller devices */
   }
 }

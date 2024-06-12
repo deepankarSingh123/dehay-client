@@ -1,22 +1,29 @@
-import React from 'react';
-import '../css/ContactUs.css';
-import callIcon from '../images/Call.png';
-import chatIcon from '../images/Chat Now.png';
-import faqIcon from '../images/faq.png';
-import locationIcon from '../images/Calling plans.png';
+import React from "react";
+import "../css/ContactUs.css";
+import callIcon from "../images/Call.png";
+import chatIcon from "../images/Chat Now.png";
+import faqIcon from "../images/faq.png";
+import locationIcon from "../images/Calling plans.png";
 
 const ContactUs: React.FC = () => {
   return (
     <section className="contact-us">
       <div className="contact-header">
         <h2>Contact us</h2>
-        <h1>Got questions?<br />We’re here to help</h1>
+        <h1>
+          Got questions?
+          <br />
+          We’re here to help
+        </h1>
       </div>
       <div className="contact-content">
         <div className="contact-info">
           <div className="important">
             <h3>Important</h3>
-            <p>For your security, do not include any login, credit card or bank information in a chat or message.</p>
+            <p>
+              For your security, do not include any login, credit card or bank
+              information in a chat or message.
+            </p>
           </div>
           <div className="contact-methods">
             <div className="method">
@@ -44,20 +51,38 @@ const ContactUs: React.FC = () => {
                 <label htmlFor="interest">I'm interested in</label>
                 <select id="interest" className="form-control">
                   <option value="">Select product</option>
+                  <option value="International Calling">International Calling</option>
+                  <option value="Mobile Top-up">Mobile Top-up</option>
+                  <option value="E-Gift">E-Gift</option>
+                  <option value="Others">Others</option>
                   {/* Add more options as needed */}
                 </select>
               </div>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" className="form-control" placeholder="Enter your name" />
+                <input
+                  type="text"
+                  id="name"
+                  className="form-control"
+                  placeholder="Enter your name"
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" className="form-control" placeholder="Enter your email" />
+                <input
+                  type="email"
+                  id="email"
+                  className="form-control"
+                  placeholder="Enter your email"
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" className="form-control" placeholder="Enter your message"></textarea>
+                <textarea
+                  id="message"
+                  className="form-control"
+                  placeholder="Enter your message"
+                ></textarea>
               </div>
               <button type="submit">Submit</button>
             </form>

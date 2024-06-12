@@ -1,0 +1,385 @@
+.mobile-topup-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mobile-topup-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .mobile-topup-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .expandable {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+  }
+  
+  .expandable-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    text-align: left;
+    color: black;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .expandable-btn:hover {
+    color: white;
+    background-color: #662C90;
+  }
+  
+  .expandable-content {
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: absolute;
+  }
+  
+  .expandable-content .expandable-item {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expandable-content .expandable-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .flag {
+    margin-right: 10px;
+  }
+  
+  .name {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .selected-countries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .selected-country {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 5px;
+  }
+  
+  .selected-country .flag {
+    margin-right: 10px;
+  }
+  
+  /* New Section Styles */
+  .stay-connected-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    text-align: left;
+  }
+  
+  .image-container1 {
+    flex: 1;
+  }
+  
+  .mobile-screens {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .text-container {
+    flex: 1;
+    padding-left: 10px;
+  }
+  
+  .text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+/* How to top up section */
+.how-to-topup-section {
+    margin-top: 80px;
+    text-align: center;
+  }
+  
+  .how-to-topup-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .topup-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  .step {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .step h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    height: 50px; /* Set a fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  .step p {
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+/* Why send mobile recharges section */
+.why-send-recharges-section {
+    margin-top: 80px;
+    text-align: center;
+  }
+  
+  .why-send-recharges-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .recharge-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  .step {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .icon {
+    margin-bottom: 10px;
+  }
+  
+  .icon img {
+    width: 60px;
+    height: auto;
+  }
+  
+  .step h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  
+  
+  .step p {
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .send-topup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .send-topup .image {
+    flex: 1;
+  }
+  
+  .send-topup .image img {
+    width: 80%;
+    max-width: 450px;
+  }
+  
+  .send-topup .text {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+  }
+  
+  .send-topup .text h2 {
+    font-size: 2em;
+  }
+  
+  .send-topup .text p {
+    font-size: 1.2em;
+  }
+  
+  .send-topup .downloads {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .send-topup .downloads a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 40px; /* Move the images up */
+  }
+  
+  .send-topup .downloads img {
+    margin-right: 20px;
+    width: 100px;
+    object-fit: contain;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .recharge-steps {
+      flex-direction: column;
+    }
+  
+    .step {
+      margin-bottom: 20px;
+    }
+
+  }
+  
+  
+  @media (max-width: 768px) {
+    .mobile-topup-container h2 {
+      font-size: 2em;
+    }
+  
+    .mobile-topup-container p {
+      font-size: 1em;
+    }
+  
+    .expandable {
+      width: 100%;
+    }
+  
+    .expandable-btn {
+      font-size: 1em;
+      padding: 10px 20px;
+      width: 100%;
+    }
+  
+    .expandable-content {
+      width: 100%;
+    }
+  
+    .expandable-content .expandable-item {
+      font-size: 1em;
+      padding: 10px;
+    }
+  
+    .selected-country {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    /* New Section Responsive Styles */
+    .stay-connected-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container1 {
+      margin-bottom: 20px;
+    }
+  
+    .text-container {
+      padding-left: 0;
+    }
+    /* How to top up section */
+    .topup-steps {
+        flex-direction: column;
+      }
+    
+      .step {
+        margin-bottom: 20px;
+      }
+      .stay-connected, .send-topup {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .stay-connected .phones, .send-topup .image {
+        text-align: center;
+      }
+    
+      .stay-connected .phones img, .send-topup .image img {
+        margin-right: 0;
+      }
+    
+      .stay-connected .text, .send-topup .text {
+        padding-left: 0;
+      }
+    
+      .send-topup .downloads {
+        justify-content: center;
+      }
+    
+      .how-to-top-up .steps {
+        flex-direction: column;
+      }
+    
+      .how-to-top-up .step {
+        margin-bottom: 20px;
+      }
+    
+      .how-to-top-up .step, .send-topup .text, .send-topup .image {
+        text-align: center;
+      }
+    
+    }
+
+  
+  
