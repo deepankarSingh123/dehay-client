@@ -1,13 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/ContactUs.css";
 import callIcon from "../images/Call.png";
 import chatIcon from "../images/Chat Now.png";
 import faqIcon from "../images/faq.png";
 import locationIcon from "../images/Calling plans.png";
-import userIcon from "../images/user.png";
-import emailIcon from "../images/email.png";
 
 const ContactUs: React.FC = () => {
+  const [formData, setFormData] = useState({
+    interest: "",
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      // Dummy POST API call
+      const response = await fetch("https://api.example.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit the form. Please try again.");
+    }
+  };
+
   return (
     <section className="contact-us-page">
       <div className="contact-header">
@@ -15,7 +53,7 @@ const ContactUs: React.FC = () => {
         <h1>
           Got questions?
           <br />
-          We’re here to help
+          We're here to help
         </h1>
       </div>
       <div className="contact-content">
@@ -47,54 +85,77 @@ const ContactUs: React.FC = () => {
           </div>
         </div>
         <div className="contact-form-wrapper">
-          <div className="contact-form">
-            <form>
-              <div className="form-group">
-                <label htmlFor="interest">Issue Type</label>
-                <select id="interest" className="form-control">
-                  <option value="">Select issue type</option>
-                  <option value="International Calling">International Calling</option>
-                  <option value="Mobile Top-up">Mobile Top-up</option>
-                  <option value="E-Gift">E-Gift</option>
-                  <option value="Others">Others</option>
-                  {/* Add more options as needed */}
-                </select>
-              </div>
-              <div className="form-group with-icon">
-                <label htmlFor="name">Name</label>
-                <div className="input-icon-wrapper">
-                  <img src="userIcon" alt="User Icon" className="input-icon" />
-                  <input
-                    type="text"
-                    id="name"
-                    className="form-control with-icon"
-                    placeholder="Enter your name"
-                  />
+          {isSubmitted ? (
+            <div className="thank-you-message">
+              <h2>Thank you for submitting!</h2>
+              <p>We'll get back to you as soon as possible.</p>
+            </div>
+          ) : (
+            <div className="contact-form">
+              <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label htmlFor="interest">Issue Type</label>
+                  <select
+                    id="interest"
+                    name="interest"
+                    className="form-control"
+                    value={formData.interest}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select issue type</option>
+                    <option value="International Calling">
+                      International Calling
+                    </option>
+                    <option value="Mobile Top-up">Mobile Top-up</option>
+                    <option value="E-Gift">E-Gift</option>
+                    <option value="Others">Others</option>
+                  </select>
                 </div>
-              </div>
-              <div className="form-group with-icon">
-                <label htmlFor="email">Email</label>
-                <div className="input-icon-wrapper">
-                  <img src="emailIcon" alt="Email Icon" className="input-icon" />
-                  <input
-                    type="email"
-                    id="email"
-                    className="form-control with-icon"
-                    placeholder="Enter your email"
-                  />
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <div className="input-icon-wrapper">
+                    <span className="input-icon">👤</span>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="form-control with-icon"
+                      placeholder="Enter your name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  className="form-control"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <div className="input-icon-wrapper">
+                    <span className="input-icon">✉️</span>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="form-control with-icon"
+                      placeholder="Enter your email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>{" "}
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    className="form-control"
+                    placeholder="Enter your message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          )}
         </div>
       </div>
     </section>

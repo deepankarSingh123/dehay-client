@@ -101,26 +101,72 @@
   width: 100%;
   max-width: 600px;
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
+  gap: 20px;  /* Add consistent gap between form elements */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  /* Add gap between label and input */
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
   font-size: 14px;
   color: #333333;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f7f5f9;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-control::placeholder {
+  color: #888888;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button[type="submit"] {
+  padding: 15px;
+  background-color: #662C90;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a278a;
 }
 
 .input-icon-wrapper {
@@ -129,33 +175,17 @@
 
 .input-icon {
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
+  color: #888888;
 }
 
-.form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #cccccc;
-  border-radius: 25px;
-  background-color: #f0f0f0;
-  outline: none;
-  box-sizing: border-box;
-  padding-left: 40px; /* Adjust padding for icon space */
+.form-control.with-icon {
+  padding-left: 45px;
 }
-
-.form-control::placeholder {
-  color: #666666;
-}
-
-.with-icon {
-  padding-left: 40px;
-}
-
 .form-group textarea {
   resize: vertical;
   height: 150px;
