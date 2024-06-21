@@ -1,4 +1,4 @@
-.contact-us {
+.contact-us-page {
   background-color: #ffffff;
   padding: 40px 20px;
   font-family: "Poppins", sans-serif;
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
-  max-width: 50%; /* Adjusted to reduce the size */
+  max-width: 100%;
 }
 
 .important {
@@ -94,12 +94,12 @@
   display: flex;
   justify-content: flex-start;
   flex: 1;
-  max-width: 60%; /* Adjusted to make the form wider */
+  max-width: 100%;
 }
 
 .contact-form {
   width: 100%;
-  max-width: 600px; /* Increase the max-width */
+  max-width: 600px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
@@ -145,6 +145,7 @@
   background-color: #f0f0f0;
   outline: none;
   box-sizing: border-box;
+  padding-left: 40px; /* Adjust padding for icon space */
 }
 
 .form-control::placeholder {
@@ -193,6 +194,14 @@ button:hover {
   .contact-methods {
     grid-template-columns: 1fr 1fr;
   }
+
+  .contact-info {
+    max-width: 50%;
+  }
+
+  .contact-form-wrapper {
+    max-width: 50%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -202,5 +211,37 @@ button:hover {
 
   .contact-content {
     gap: 150px;
+  }
+
+  .contact-info {
+    max-width: 40%;
+  }
+
+  .contact-form-wrapper {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .contact-form-wrapper {
+    max-width: 100%;
+  }
+
+  .method {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }

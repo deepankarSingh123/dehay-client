@@ -1,190 +1,347 @@
-.about-us-section {
-  background-color: #ffffff;
-  padding: 40px 20px;
+.about-us-page {
   font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
   text-align: center;
 }
 
-.about-header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
+.about-hero {
+  background-color: #ffffff;
+  padding: 60px 20px;
 }
 
-.about-header h1 {
+.about-hero h1 {
   font-size: 36px;
-  color: #000000;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
-.about-header p {
+.about-hero p {
   font-size: 18px;
-  color: #662C90;
-  margin-bottom: 24px;
+  color: #666666;
+  margin-bottom: 20px;
 }
 
-.signup-button1 {
+.about-signup-button {
+  padding: 10px 30px; /* Adjusted padding */
   background-color: #662C90;
   color: #ffffff;
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 8px 16px;
+  border-radius: 25px;
   font-size: 14px;
+  cursor: pointer;
+  max-width: 200px; /* Added max-width */
+  width: auto; /* Ensure it doesn't stretch */
+  margin: 0 auto; /* Center the button */
 }
 
-.signup-button:hover {
+.about-signup-button:hover {
   background-color: #5a00b8;
 }
 
-.about-content, .borders-content, .statistics, .services-cards, .questions-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  max-width: 1200px;
-  margin: 40px auto;
-  
-}
-
-.about-content {
-  text-align: left;
-}
-
-.about-text, .borders-text {
-  padding: 0 20px;
-}
-
-.about-image, .borders-image {
-  text-align: center;
-}
-
-.about-image img, .borders-image img, .stat-card img, .service-card img {
-  width: 200%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.image-with-circle {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto 40px;
-}
-
-.circle-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 0;
-  padding-bottom: 80%;
-  background-color: #662C90;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.phone-image {
-  position: absolute;
-  width: 50%;
-  height: auto;
-  z-index: 1;
-  top: 25%;
-}
-
-.removing-borders, .our-services, .still-have-questions {
-  background-color: #ffffff;
+.about-who-we-are {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 40px 20px;
-}
-
-.statistics, .services-cards, .questions-cards {
-  flex-wrap: wrap;
+  text-align: left;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-.stat-card, .service-card, .question-card {
-  flex: 1 1 calc(100% - 40px);
-  max-width: calc(100% - 40px);
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
+.about-who-we-are h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
-.stat-card h3, .service-card h3 {
-  font-size: 24px;
+.about-who-we-are p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+  margin-right: 20px; /* Added margin-right to add space between text and image */
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-removing-borders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.about-app-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about-app-image img {
+  max-width: 80%;
+  height: auto;
+  margin-right: 20px; /* Added margin-right to add space between image and text */
+}
+
+.about-borders-content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.about-borders-content h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.about-borders-content p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.about-feature-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-feature-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.about-feature-card p {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.about-services {
+  margin-top: 40px;
+}
+
+.about-services h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 20px;
+  flex: 1;
+  max-width: 45%;
+  min-width: 300px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.about-image-container {
+  width: 100%;
+  height: auto;
+  background-color: #e3e2e2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.about-service-content {
+  padding: 20px;
+}
+
+.about-service-content h3 {
+  font-size: 20px;
   color: #333333;
   margin-bottom: 10px;
 }
 
-.stat-card p, .service-card p, .question-card p {
-  font-size: 14px;
+.about-service-content p {
+  font-size: 16px;
   color: #666666;
+  margin-bottom: 20px;
 }
 
-.learn-more {
-  color: #662C90;
+.about-learn-more {
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
 }
 
-.still-have-questions h2 {
-  font-size: 36px;
-  color: #000000;
-  margin-bottom: 40px;
+.about-learn-more:hover {
+  text-decoration: underline;
 }
 
-.question-card img {
-  width: 48px;
-  height: auto;
+.about-still-have-questions {
+  margin-top: 40px;
+}
+
+.about-still-have-questions h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-questions-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-question-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  flex: 1;
+  max-width: 30%;
+  min-width: 200px;
+}
+
+.about-question-icon {
+  width: 50px;
+  height: 50px;
   margin-bottom: 10px;
 }
 
+.about-question-card p {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Responsive styles */
 @media (min-width: 768px) {
-  .about-header h1 {
+  .about-hero h1 {
     font-size: 48px;
   }
 
-  .about-header p {
-    font-size: 24px;
+  .about-hero p {
+    font-size: 20px;
   }
 
-  .about-content, .borders-content, .statistics, .services-cards, .questions-cards {
+  .about-who-we-are {
+    padding: 60px 20px;
     flex-direction: row;
   }
 
-  .about-text, .borders-text {
-    padding: 0 40px;
+  .about-who-we-are h2 {
+    font-size: 32px;
   }
 
-  .stat-card, .service-card, .question-card {
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
+  .about-who-we-are p {
+    font-size: 18px;
   }
 
-  .phone-image {
-    width: 250px;
+  .about-removing-borders {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 20px;
+  }
+
+  .about-app-image {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .about-borders-content {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .about-features {
+    flex-direction: row;
+  }
+
+  .about-feature-card {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
 
-@media (min-width: 1024px) {
-  .about-header h1 {
-    font-size: 56px;
+@media (max-width: 767px) {
+  .about-who-we-are {
+    flex-direction: column;
   }
 
-  .about-header p {
-    font-size: 28px;
+  .about-text {
+    padding-right: 0;
+    margin-right: 0; /* Removed margin-right for smaller screens */
   }
 
-  .stat-card, .service-card, .question-card {
-    flex: 1 1 calc(25% - 40px);
-    max-width: calc(25% - 40px);
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-feature-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-app-image img {
+    margin-right: 0; /* Remove margin-right for smaller screens */
+  }
+
+  .about-service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-service-card {
+    max-width: 100%;
+  }
+
+  .about-image-container img {
+    max-height: 200px; /* Adjust this value as needed for smaller screens */
   }
 }

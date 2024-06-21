@@ -32,6 +32,7 @@
     object-fit: contain;
   margin: 10px 0;
   width: 200px;
+  gap: 18px;
   }
 }
 
@@ -42,6 +43,7 @@
   }
 
   .app-buttons img {
-    width: 200px;
+    width: 150px;
+    gap: 20px;
   }
 }

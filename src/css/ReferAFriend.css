@@ -1,4 +1,4 @@
-.refer-a-friend {
+.refer-a-friend-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -6,19 +6,19 @@
   text-align: center;
 }
 
-.refer-a-friend h1 {
+.refer-a-friend-page h1 {
   font-size: 36px;
   color: #000000;
   margin-bottom: 20px;
 }
 
-.refer-a-friend p {
+.refer-a-friend-page p {
   font-size: 16px;
   color: #666666;
   margin-bottom: 30px;
 }
 
-.step {
+.refer-step {
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -30,26 +30,26 @@
   flex-direction: column;
 }
 
-.step-icon {
+.refer-step-icon {
   margin-bottom: 20px;
 }
 
-.step-icon img {
+.refer-step-icon img {
   width: 60px; /* Adjust size as needed */
   height: auto;
 }
 
-.step-content {
+.refer-step-content {
   text-align: center;
 }
 
-.step-content h2 {
+.refer-step-content h2 {
   font-size: 20px;
   color: #333333;
   margin-bottom: 10px;
 }
 
-.step-content p {
+.refer-step-content p {
   font-size: 14px;
   color: #666666;
   margin: 0;
@@ -57,41 +57,41 @@
 
 /* Responsive styles */
 @media (min-width: 768px) {
-  .refer-a-friend h1 {
+  .refer-a-friend-page h1 {
     font-size: 48px;
   }
 
-  .refer-a-friend p {
+  .refer-a-friend-page p {
     font-size: 18px;
   }
 
-  .step {
+  .refer-step {
     flex-direction: row;
     padding: 50px;
   }
 
-  .step-icon {
+  .refer-step-icon {
     flex: 0 0 100px;
     margin-right: 20px;
     margin-bottom: 0;
   }
 
-  .step-content {
+  .refer-step-content {
     text-align: left;
     padding-bottom: 0;
   }
 
-  .step-content h2 {
+  .refer-step-content h2 {
     font-size: 24px;
   }
 
-  .step-content p {
+  .refer-step-content p {
     font-size: 16px;
   }
 }
 
 @media (min-width: 1024px) {
-  .refer-a-friend h1 {
+  .refer-a-friend-page h1 {
     font-size: 56px;
   }
 }

@@ -2,11 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import RecentArticles from './components/RecentArticles';
-import TrendyTransfer from './components/MoneyTransfer';
-import InternationalCalling from './components/InternationalCalling';
-import MobileTopUp from './components/MobileTopUp';
+// import Hero from './components/Hero';
+// import RecentArticles from './components/RecentArticles';
+// import TrendyTransfer from './components/MoneyTransfer';
+// import InternationalCalling from './components/InternationalCalling';
+// import MobileTopUp from './components/MobileTopUp';
 import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
 import Support from './components/Support';
@@ -22,16 +22,18 @@ import OTPPage from './components/OTPPage';
 import CountryInternationalCalling from './components/CountryInternationalCalling';
 import Services from './components/Services';
 import MobileTopUpService from './components/MobileTopUpService';
+import Balance from './components/Balance';
+import TransactionHistory from './components/TransactionHistory';
 
-const Home: React.FC = () => (
-  <Container>
-    <Hero />
-    <RecentArticles />
-    <TrendyTransfer />
-    <InternationalCalling />
-    <MobileTopUp />
-  </Container>
-);
+// const Home: React.FC = () => (
+//   <Container>
+//     <Hero />
+//     <RecentArticles />
+//     <TrendyTransfer />
+//     <InternationalCalling />
+//     <MobileTopUp />
+//   </Container>
+// );
 
 const App: React.FC = () => {
   return (
@@ -46,16 +48,18 @@ const App: React.FC = () => {
               <>
                 <Header />
                 <Routes>
-                  <Route path="/" element={<Container><Home /></Container>} />
+                  {/* <Route path="/" element={<Container><Home /></Container>} /> */}
                   <Route path="/contact-us" element={<Container><ContactUs /></Container>} />
                   <Route path="/about-us" element={<Container><AboutUs /></Container>} />
                   <Route path="/support" element={<Container><Support /></Container>} />
                   <Route path="/privacy-policy" element={<Container><PrivacyPolicy /></Container>} />
                   <Route path="/terms-and-conditions" element={<Container><TermsAndConditions /></Container>} />
                   <Route path="/refer-a-friend" element={<Container><ReferAFriend /></Container>} />
-                  <Route path="/country-international-calling" element={<Container><CountryInternationalCalling /></Container>} />
+                  <Route path="/" element={<Container><CountryInternationalCalling /></Container>} />
                   <Route path="/services" element={<Container><Services /></Container>} />
                   <Route path="/mobile-topup" element={<Container><MobileTopUpService /></Container>} />
+                  <Route path="/balance" element={<Container><Balance /></Container>} />
+                  <Route path="/transactions" element={<Container><TransactionHistory /></Container>} />
                 </Routes>
                 <AppPromo />
                 <Footer />

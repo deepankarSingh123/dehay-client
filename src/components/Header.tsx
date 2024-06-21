@@ -32,14 +32,14 @@ const Header: React.FC = () => {
               className={`dropdown ${servicesDropdownOpen ? 'open' : ''}`} 
               onMouseEnter={toggleServicesDropdown} 
               onMouseLeave={toggleServicesDropdown}
-              onClick={toggleServicesDropdown} // Add click handler for mobile
+              onClick={toggleServicesDropdown} 
             >
               <span className="nav-link">Services</span>
               {servicesDropdownOpen && (
                 <ul className="dropdown-menu">
                   <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
-                  <li><Link to="/country-international-calling" onClick={toggleMenu}>International Calling</Link></li>
-                  <li><Link to="/service3" onClick={toggleMenu}>Service 3</Link></li>
+                  <li><Link to="/" onClick={toggleMenu}>International Calling</Link></li>
+                  <li><Link to="/mobile-topup" onClick={toggleMenu}>Mobile Top-up</Link></li>
                 </ul>
               )}
             </li>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           </div>
           <div className="auth-buttons">
             <Link to="/login" className="login-button">Login</Link>
-            <Link to="/join-us" className="join-button">Join Us</Link>
+            <Link to="/login" className="join-button">Join Us</Link>
           </div>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>

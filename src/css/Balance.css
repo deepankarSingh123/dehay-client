@@ -1,0 +1,188 @@
+.balance-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .balance-info {
+    margin-bottom: 30px;
+  }
+  
+  .balance-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .balance-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .balance-info h1 sup {
+    font-size: 0.6em;
+  }
+  
+  .recharge-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .recharge-options button {
+    background-color: white;
+    border: 2px solid #7E3CC3;
+    color: #7E3CC3;
+    padding: 12px 24px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .recharge-options button.selected {
+    background-color: #7E3CC3;
+    color: white;
+  }
+  
+  .auto-recharge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .auto-recharge p {
+    font-size: 1.2em;
+    margin-right: 15px;
+  }
+  
+  .auto-recharge .toggle-icon {
+    width: 40px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  
+  .auto-recharge .toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+  }
+  
+  .auto-recharge .toggle-icon.on {
+    background-color: #7E3CC3;
+  }
+  
+  .auto-recharge .toggle-icon.on::after {
+    transform: translateX(16px);
+  }
+  
+  .auto-recharge p:last-child {
+    font-size: 1em;
+    color: #999;
+    margin-left: 15px;
+  }
+  
+  .promo-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 70px;
+  }
+  
+  .promo-code input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1em;
+    margin-right: 15px;
+    flex: 1;
+  }
+  
+  .promo-code button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #7E3CC3;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1em;
+  }
+  
+  .payment-details {
+    margin-bottom: 30px;
+    margin-top: 70px;
+  }
+  
+  .payment-details p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .payment-details p:last-child {
+    font-size: 1em;
+    color: #999;
+  }
+  
+  .card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .card-info span {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+  
+  .card-info input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1em;
+    margin-right: 15px;
+    flex: 1;
+  }
+  
+  .card-info input::placeholder {
+    color: #999;
+  }
+  
+  .card-info select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1em;
+  }  
+  .add-balance-button {
+    background-color: #7E3CC3;
+    color: white;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .add-balance-button:hover {
+    background-color: #662C90;
+  }

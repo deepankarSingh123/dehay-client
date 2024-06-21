@@ -8,6 +8,7 @@ import google from "../images/goo.png";
 import apple from "../images/ios.png";
 import qr from "../images/qr.png";
 import phone1 from "../images/Topup.png";
+import logo from "../images/logio.png"
 
 const countries = [
   { name: "Nigeria", flag: "🇳🇬" },
@@ -167,6 +168,7 @@ const MobileTopUpService: React.FC = () => {
             <img src={phone1} alt="Phone" />
           </div>
           <div className="text">
+          <img src={logo} alt="Dehay Mobile Logo" className="logo" />
             <h2>
               Send Topup from the <br />
               Dehay Mobile App

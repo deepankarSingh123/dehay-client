@@ -279,6 +279,11 @@
     object-fit: contain;
     height: auto;
   }
+  .send-topup .logo {
+    display: block;
+    align-self: center;
+    margin:  20px; /* Center the logo and add some margin below */
+  }
   
   @media (max-width: 768px) {
     .recharge-steps {
