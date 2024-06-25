@@ -2,21 +2,35 @@ import React, { useState } from "react";
 import "../css/CountryInternationalCalling.css";
 import phone1 from "../images/Group 1686556119.png";
 import phone2 from "../images/Mask group.png";
-import google from "../images/goo.png";
-import apple from "../images/ios.png";
+import google from "../images/Container-google.png";
+import apple from "../images/Container-apple.png";
 import qr from "../images/qr.png";
 import rates from "../images/Great Rates.png";
 import security from "../images/Simplicity and Security.png";
 import quality from "../images/Excellent quality.png";
+import vector1 from  "../images/Vector.png"
+import vector2 from  "../images/Vector (1).png"
+import vector3 from  "../images/Vector (2).png"
+import vector4 from  "../images/Vector (3).png"
+import vector5 from  "../images/Vector (4).png"
+import vector6 from  "../images/Vector (5).png"
 import { Link } from "react-router-dom";
 
+// Import flag images
+import nigeriaFlag from "../images/Nigeria.png";
+import ghanaFlag from "../images/ghana.png";
+import indiaFlag from "../images/india.png";
+import jamaicaFlag from "../images/jamaica.png";
+import eritreaFlag from "../images/eritrea.png";
+import ethiopiaFlag from "../images/Ethopia.png";
+
 const countries = [
-  { name: "Nigeria", code: "+234", flag: "🇳🇬" },
-  { name: "Ghana", code: "+233", flag: "🇬🇭" },
-  { name: "India", code: "+91", flag: "🇮🇳" },
-  { name: "Jamaica", code: "+1", flag: "🇯🇲" },
-  { name: "Eritrea", code: "+291", flag: "🇪🇷" },
-  { name: "Ethiopia", code: "+251", flag: "🇪🇹" },
+  { name: "Nigeria", code: "+234", flag: nigeriaFlag },
+  { name: "Ghana", code: "+233", flag: ghanaFlag },
+  { name: "India", code: "+91", flag: indiaFlag },
+  { name: "Jamaica", code: "+1", flag: jamaicaFlag },
+  { name: "Eritrea", code: "+291", flag: eritreaFlag },
+  { name: "Ethiopia", code: "+251", flag: ethiopiaFlag },
 ];
 
 const faqData = [
@@ -72,11 +86,9 @@ const CountryInternationalCalling: React.FC = () => {
               <div
                 key={country.code}
                 className="expandable-item"
-                onClick={() =>
-                  handleCountryClick(`${country.flag} ${country.name}`)
-                }
+                onClick={() => handleCountryClick(country.name)}
               >
-                <span className="flag">{country.flag}</span>
+                <img src={country.flag} alt={`${country.name} flag`} className="flag-image" />
                 <span className="name">{country.name}</span>
                 <span className="code">{country.code}</span>
               </div>
@@ -97,12 +109,12 @@ const CountryInternationalCalling: React.FC = () => {
                 Our unique app is ready to deliver on its promise of
                 reliability, low cost, and a high quality connection. You can
                 also call and send messages app to app for free over Wi-Fi. So,
-                whether you’re trying to call a family member, set up a business
-                meeting, or reconnect with a long-lost friend, we’re here to
+                whether you're trying to call a family member, set up a business
+                meeting, or reconnect with a long-lost friend, we're here to
                 help.
               </p>
               <p>
-                Distance shouldn’t mean disconnected. At DEHAY Mobile, it’s our
+                Distance shouldn't mean disconnected. At DEHAY Mobile, it's our
                 mission to help you stay in touch despite the miles. Make
                 international calls, send messages, and stay connected with some
                 of the best rates for calling overseas.
@@ -152,7 +164,7 @@ const CountryInternationalCalling: React.FC = () => {
             </div>
             <h3>Great Rates</h3>
             <p>
-              Who said staying connected had to cost a fortune? Whether you’re
+              Who said staying connected had to cost a fortune? Whether you're
               calling internationally to Haiti, Kenya, Nigeria, Ghana or
               Guatemala with DEHAY Mobile, you can rest assured that you are
               getting the best calling rates around. This is a better way to
@@ -166,7 +178,7 @@ const CountryInternationalCalling: React.FC = () => {
             </div>
             <h3>Excellent Quality</h3>
             <p>
-              Experience the best call quality with DEHAY Mobile. Whether you’re
+              Experience the best call quality with DEHAY Mobile. Whether you're
               calling over Wi-Fi or using mobile data, our app ensures that you
               get the best possible connection, with crystal clear audio and
               minimal interruptions.
@@ -191,7 +203,7 @@ const CountryInternationalCalling: React.FC = () => {
         <div className="testimonials-cards">
           <div className="testimonial-card">
             <img
-              src="customer1.png"
+              src={vector1}
               alt="Customer 1"
               className="testimonial-img"
             />
@@ -204,7 +216,7 @@ const CountryInternationalCalling: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <img
-              src="customer2.png"
+              src={vector2}
               alt="Customer 2"
               className="testimonial-img"
             />
@@ -217,7 +229,7 @@ const CountryInternationalCalling: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <img
-              src="customer3.png"
+              src={vector3}
               alt="Customer 3"
               className="testimonial-img"
             />
@@ -230,7 +242,7 @@ const CountryInternationalCalling: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <img
-              src="customer4.png"
+              src={vector4}
               alt="Customer 4"
               className="testimonial-img"
             />
@@ -243,7 +255,7 @@ const CountryInternationalCalling: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <img
-              src="customer5.png"
+              src={vector5}
               alt="Customer 5"
               className="testimonial-img"
             />
@@ -256,7 +268,7 @@ const CountryInternationalCalling: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <img
-              src="customer6.png"
+              src={vector6}
               alt="Customer 6"
               className="testimonial-img"
             />

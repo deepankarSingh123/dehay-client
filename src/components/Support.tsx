@@ -3,9 +3,10 @@ import React from 'react';
 import '../css/Support.css';
 import internationalCallingIcon from '../images/International Calling.png'
 import mobileTopUpIcon from '../images/Mobile Top-Up.png'
-// import myAccountIcon from '../images/International Calling.png'
 import otherServicesIcon from '../images/Other Services.png'
 import contactUsIcon from '../images/fgd.png'
+import account from  "../images/Frame.png"
+
 
 const Support: React.FC = () => {
   return (
@@ -17,16 +18,22 @@ const Support: React.FC = () => {
       <div className="support-content">
         <div className="support-methods">
           <div className="method">
+            <a href="/">
             <img src={internationalCallingIcon} alt="International Calling" />
             <p>International Calling</p>
+            </a>
           </div>
           <div className="method">
+            <a href="/mobile-topup">
             <img src={mobileTopUpIcon} alt="Mobile Top-Up" />
             <p>Mobile Top-Up</p>
+            </a>
           </div>
           <div className="method">
-            <img src="myAccountIcon" alt="My Account" />
+            <a href="/login">
+            <img src={account} alt="My Account" />
             <p>My Account</p>
+            </a>
           </div>
           <div className="method">
             <img src={otherServicesIcon} alt="Other Services" />
@@ -49,7 +56,7 @@ const Support: React.FC = () => {
           <h3 id="calling-app">Calling app</h3>
           <h4>What services are available through the Dehay Mobile Calling App?</h4>
           <p>
-            The app can be used for <a href="/international-calling">international calling</a>, including unlimited plans, <a href="/mobile-topup">international and domestic mobile top-up</a>, and money transfer.
+            The app can be used for <a href="/">international calling</a>, including unlimited plans, <a href="/mobile-topup">international and domestic mobile top-up</a>, and money transfer.
           </p>
           <p>
             We frequently update the app with performance improvements and new features, so be sure to <a href="/download">download</a> the app and get the most out of your BOSS Revolution account. You'll save even more with lower international rates and special offers just for app users!
@@ -141,7 +148,7 @@ const Support: React.FC = () => {
           <h4 id="international-topup">International mobile top-up</h4>
           <h5>What is International Mobile Top Up?</h5>
           <p>
-            Dehay Mobile <a href="/international-topup">International Mobile Top Up</a> is a service that allows you to recharge the mobile phones of your loved ones abroad. Topping up a mobile phone is easy — all you need to know is your recipient's mobile service provider ("carrier") and mobile phone number.
+            Dehay Mobile <a href="/mobile-topup">International Mobile Top Up</a> is a service that allows you to recharge the mobile phones of your loved ones abroad. Topping up a mobile phone is easy — all you need to know is your recipient's mobile service provider ("carrier") and mobile phone number.
           </p>
           <h4 id="domestic-topup">Domestic Mobile top up</h4>
           <h5>What is Domestic Mobile Top Up?</h5>
@@ -154,7 +161,7 @@ const Support: React.FC = () => {
             The fastest, most convenient way to send international mobile top ups is with the Dehay Mobile Calling App. All it takes is a few taps — no need to enter your recipient's phone number. <a href="/download">Download the app now</a>
           </p>
           <p>
-            You can also <a href="/register">register</a> and send an international mobile top up <a href="/online">online</a>:
+            You can also <a href="/login">register</a> and send an international mobile top up <a href="/online">online</a>:
           </p>
           <ul>
             <li>Enter the international mobile phone number you'd like to top up</li>
@@ -164,7 +171,7 @@ const Support: React.FC = () => {
           </ul>
           <h4>How do I send a Domestic Mobile Top Up?</h4>
           <p>
-            <a href="/download">Download</a> the Dehay Mobile Calling App and send domestic mobile top ups with just a few taps or <a href="/create">create</a> your Dehay Mobile web account and do it right on the website.
+            <a href="/download">Download</a> the Dehay Mobile Calling App and send domestic mobile top ups with just a few taps or <a href="/login">create</a> your Dehay Mobile web account and do it right on the website.
           </p>
           <h4>How much can I top up at one time?</h4>
           <p>
@@ -225,9 +232,9 @@ const Support: React.FC = () => {
           <h5>How do I update information in my account?</h5>
           <p>Use these links to login and access specific account information:</p>
           <ul>
-            <li><a href="/card-information">Credit or Debit Card Information</a></li>
-            <li><a href="/personal-profile">Personal Profile</a></li>
-            <li><a href="/auto-recharge">Auto Recharge</a></li>
+            <li>Credit or Debit Card Information</li>
+            <li>Personal Profile</li>
+            <li>Auto Recharge</li>
           </ul>
 
           <h5>How do I view my transaction history?</h5>
@@ -248,7 +255,7 @@ const Support: React.FC = () => {
           <h5>How do I update my card information?</h5>
           <p>Use this link to login and update your card information:</p>
           <ul>
-            <li><a href="/card-information">Credit or Debit Card Information</a></li>
+            <li>Credit or Debit Card Information</li>
           </ul>
 
           <h5>What is Auto Recharge?</h5>

@@ -71,6 +71,13 @@ p {
   margin-right: 10px;
 }
 
+.flag-image {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
 .name {
   flex-grow: 1;
   text-align: left;
@@ -169,7 +176,8 @@ p {
 
 .app-download img {
   margin: 0px;
-  height: 50px;
+  object-fit: contain;
+  height: 80px;
 }
 
 .phone-image-section {
@@ -397,6 +405,11 @@ p {
     margin: 10px 0;
   }
   
+  .flag-image {
+    width: 25px;
+    height: 16px;
+    margin-right: 10px;
+  }
 
   .phone-image-right {
     width: 200px; /* Adjust width for smaller screens */

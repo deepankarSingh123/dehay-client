@@ -60,6 +60,24 @@
   margin: 0;
 }
 
+.method a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.method a:hover {
+  text-decoration: none;
+}
+
+.support-methods .method a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.support-methods .method a:hover {
+  text-decoration: none;
+}
+
 .contact-us-section {
   display: flex;
   align-items: center;

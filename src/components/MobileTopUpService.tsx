@@ -4,19 +4,26 @@ import connect from "../images/Stay connected.png";
 import security from "../images/Simplicity and Security.png";
 import network from "../images/Other Services.png";
 import balance from "../images/sd.png";
-import google from "../images/goo.png";
-import apple from "../images/ios.png";
+import google from "../images/Container-google.png";
+import apple from "../images/Container-apple.png";
 import qr from "../images/qr.png";
 import phone1 from "../images/Topup.png";
 import logo from "../images/logio.png"
 
+import nigeriaFlag from "../images/Nigeria.png";
+import ethiopiaFlag from "../images/Ethopia.png";
+import ugandaFlag from "../images/uganda.png";
+import haitiFlag from "../images/haiti.png";
+import mexicoFlag from "../images/mexico.png";
+import guatemalaFlag from "../images/guatemala.png";
+
 const countries = [
-  { name: "Nigeria", flag: "🇳🇬" },
-  { name: "Ethiopia", flag: "🇪🇹" },
-  { name: "Uganda", flag: "🇺🇬" },
-  { name: "Haiti", flag: "🇭🇹" },
-  { name: "Mexico", flag: "🇲🇽" },
-  { name: "Guatemala", flag: "🇬🇹" },
+  { name: "Nigeria", flag: nigeriaFlag },
+  { name: "Ethiopia", flag: ethiopiaFlag },
+  { name: "Uganda", flag: ugandaFlag },
+  { name: "Haiti", flag: haitiFlag },
+  { name: "Mexico", flag: mexicoFlag },
+  { name: "Guatemala", flag: guatemalaFlag },
 ];
 
 const MobileTopUpService: React.FC = () => {
@@ -48,11 +55,9 @@ const MobileTopUpService: React.FC = () => {
               <div
                 key={country.name}
                 className="expandable-item"
-                onClick={() =>
-                  handleCountryClick(`${country.flag} ${country.name}`)
-                }
+                onClick={() => handleCountryClick(country.name)}
               >
-                <span className="flag">{country.flag}</span>
+                <img src={country.flag} alt={`${country.name} flag`} className="flag-image" />
                 <span className="name">{country.name}</span>
               </div>
             ))}
@@ -62,7 +67,7 @@ const MobileTopUpService: React.FC = () => {
       <div className="selected-countries">
         {countries.map((country) => (
           <div key={country.name} className="selected-country">
-            <span className="flag">{country.flag}</span>
+            <img src={country.flag} alt={`${country.name} flag`} className="flag-image" />
             <span className="name">{country.name}</span>
           </div>
         ))}
