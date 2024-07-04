@@ -1,6 +1,6 @@
 header {
   background-color: #ffffff;
-  padding: 10px 20px; /* Reduce padding for a smaller overall size */
+  padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -14,7 +14,7 @@ header {
 }
 
 .logo img {
-  width: 100px; /* Reduce the logo size */
+  width: 100px;
   height: auto;
   padding-top: 10px;
 }
@@ -28,13 +28,13 @@ nav ul {
 
 nav ul li {
   position: relative;
-  margin-right: 30px; /* Increase spacing between nav items */
+  margin-right: 30px;
 }
 
 nav ul li a, .nav-link {
   color: #333333;
   text-decoration: none;
-  font-size: 14px; /* Reduce font size */
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
@@ -71,12 +71,12 @@ nav ul li a, .nav-link {
 }
 
 .language {
-  margin-right: 15px; /* Add spacing to the right of the language selector */
+  margin-right: 15px;
 }
 
 .language select {
   padding: 5px;
-  font-size: 12px; /* Reduce font size */
+  font-size: 12px;
   border-radius: 4px;
 }
 
@@ -88,20 +88,20 @@ nav ul li a, .nav-link {
 .auth-buttons .login-button {
   color: #333333;
   border: 1px solid #333333;
-  padding: 10px 20px; /* Increase padding for a bigger button */
-  border-radius: 30px; /* Increase border-radius for a bigger button */
+  padding: 10px 20px;
+  border-radius: 30px;
   text-decoration: none;
-  margin-right: 10px; /* Add spacing between buttons */
-  font-size: 14px; /* Keep font size the same */
+  margin-right: 10px;
+  font-size: 14px;
 }
 
 .auth-buttons .join-button {
   background-color: #662C90;
   color: #ffffff;
-  padding: 10px 20px; /* Increase padding for a bigger button */
-  border-radius: 30px; /* Increase border-radius for a bigger button */
+  padding: 10px 20px;
+  border-radius: 30px;
   text-decoration: none;
-  font-size: 14px; /* Keep font size the same */
+  font-size: 14px;
 }
 
 .auth-language-container {
@@ -117,13 +117,170 @@ nav ul li a, .nav-link {
 }
 
 .menu-toggle .bar {
-  width: 20px; /* Adjust the width for a smaller icon */
+  width: 20px;
   height: 3px;
   background-color: #333333;
   margin: 4px 0;
 }
 
-/* Responsive styles */
+.user-dropdown-container {
+  position: relative;
+}
+
+.user-icon-wrapper {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e4e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  color: #65676b;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 200px;
+  margin-top: 10px;
+}
+
+.user-dropdown-menu li {
+  margin: 0;
+}
+
+.user-dropdown-menu li a,
+.user-dropdown-menu li button {
+  padding: 12px 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #050505;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-dropdown-menu li a:hover,
+.user-dropdown-menu li button:hover {
+  background-color: #f2f2f2;
+}
+
+.header-user-dropdown-container {
+  position: relative;
+}
+
+.header-user-icon-wrapper {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e4e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header-user-icon {
+  width: 24px;
+  height: 24px;
+  color: #65676b;
+}
+
+.header-user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 200px;
+  margin-top: 10px;
+  padding: 8px 0;
+  list-style-type: none;
+}
+
+.header-user-dropdown-menu li {
+  margin: 0;
+}
+
+.header-user-dropdown-menu li a,
+.header-user-dropdown-menu li button {
+  padding: 10px 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.header-user-dropdown-menu li a:hover,
+.header-user-dropdown-menu li button:hover {
+  background-color: #f5f5f5;
+}
+
+.auth-language-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header-login-button {
+  color: #333333;
+  border: 1px solid #333333;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-login-button:hover {
+  background-color: #f0f0f0;
+}
+
+.header-join-button {
+  background-color: #662C90;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.header-join-button:hover {
+  background-color: #551d7a;
+}
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: row;
@@ -157,11 +314,11 @@ nav ul li a, .nav-link {
     position: static;
     box-shadow: none;
     border-radius: 0;
-    padding-left: 0; /* Remove padding */
+    padding-left: 0;
   }
 
   .dropdown-menu li a {
-    padding: 10px 0; /* Adjust padding */
+    padding: 10px 0;
   }
 
   .menu-toggle {
@@ -172,24 +329,45 @@ nav ul li a, .nav-link {
   .language {
     display: none;
   }
+
+  .user-dropdown-container {
+    margin-left: auto;
+  }
+
+  .user-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
   .logo img {
-    width: 80px; /* Reduce the logo size further for smaller screens */
+    width: 80px;
   }
 
   nav ul li a {
-    font-size: 12px; /* Reduce font size for smaller screens */
+    font-size: 12px;
   }
 
   .language select {
-    font-size: 10px; /* Reduce font size for smaller screens */
+    font-size: 10px;
   }
 
   .auth-buttons .login-button,
   .auth-buttons .join-button {
-    font-size: 12px; /* Reduce font size for smaller screens */
-    padding: 8px 16px; /* Adjust padding for smaller buttons */
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .user-icon-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+
+  .user-icon {
+    width: 20px;
+    height: 20px;
   }
 }

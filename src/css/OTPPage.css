@@ -1,106 +1,124 @@
 .otp-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f8f8;
-    font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.otp-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666666;
+}
+
+.otp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.otp-input {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.submit-button {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  color: #662C90;
+  border: 2px solid #662C90;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #662C90;
+  color: #ffffff;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  border-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.resend-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.resend {
+  cursor: pointer;
+  color: #662C90;
+  text-decoration: underline;
+}
+
+.resend.disabled {
+  color: #cccccc;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.timer {
+  font-size: 14px;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .otp-container {
     padding: 20px;
   }
-  
-  .otp-container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .logo {
-    width: 100px; /* Adjust the size as needed */
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333333;
-  }
-  
-  p {
-    font-size: 16px;
-    margin-bottom: 30px;
-    color: #666666;
-  }
-  
-  .otp-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  .otp-input {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 25px;
-    background-color: #f0f0f0;
-    width: 100%;
-    font-size: 16px;
-  }
-  
+
   .submit-button {
-    padding: 15px 20px;
-    background-color: #ffffff; /* Idle background color */
-    color: #662C90; /* Idle text color */
-    border: 2px solid #662C90; /* Border color */
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.3s ease; /* Smooth transition */
-  }
-  
-  .submit-button:hover {
-    background-color: #662C90; /* Hover background color */
-    color: #ffffff; /* Hover text color */
-  }
-  
-  .resend-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666666;
-  }
-  
-  .resend {
-    cursor: pointer;
-    color: #662C90;
-    text-decoration: underline;
-  }
-  
-  .timer {
+    padding: 10px 15px;
     font-size: 14px;
   }
-  
-  @media (max-width: 768px) {
-    .otp-container {
-      padding: 20px;
-    }
-  
-    .submit-button {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-  }
-  
+}

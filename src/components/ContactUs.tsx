@@ -13,6 +13,8 @@ const ContactUs: React.FC = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -25,26 +27,55 @@ const ContactUs: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError(null);
+    setIsLoading(true);
     try {
-      // Dummy POST API call
-      const response = await fetch("https://api.example.com/contact", {
+      const formBody = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        issuetype: formData.interest,
+        message: formData.message,
+      }).toString();
+
+      const response = await fetch("https://dehaymobile.com/contactus.php", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(formData),
+        body: formBody,
       });
 
-      if (response.ok) {
+      const responseData = await response.text();
+      console.log("Response status:", response.status);
+      console.log("Response data:", responseData);
+
+      if (response.ok || responseData.includes("success")) {
         setIsSubmitted(true);
       } else {
-        throw new Error("Submission failed");
+        console.error("Server responded with an error:", response.status, responseData);
+        throw new Error(`Server responded with status: ${response.status}`);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to submit the form. Please try again.");
+      setSubmitError("Failed to submit the form. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
+
+  const LoadingIcon = () => (
+    <svg className="loading-icon" viewBox="0 0 24 24" width="20" height="20">
+    <circle
+      className="loading-circle"
+      cx="12"
+      cy="12"
+      r="10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+    />
+  </svg>
+  );
 
   return (
     <section className="contact-us-page">
@@ -101,11 +132,10 @@ const ContactUs: React.FC = () => {
                     className="form-control"
                     value={formData.interest}
                     onChange={handleInputChange}
+                    required
                   >
                     <option value="">Select issue type</option>
-                    <option value="International Calling">
-                      International Calling
-                    </option>
+                    <option value="International Calling">International Calling</option>
                     <option value="Mobile Top-up">Mobile Top-up</option>
                     <option value="E-Gift">E-Gift</option>
                     <option value="Others">Others</option>
@@ -123,6 +153,7 @@ const ContactUs: React.FC = () => {
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={handleInputChange}
+                      required
                     />
                   </div>
                 </div>
@@ -138,9 +169,10 @@ const ContactUs: React.FC = () => {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleInputChange}
+                      required
                     />
                   </div>
-                </div>{" "}
+                </div>
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea
@@ -150,10 +182,21 @@ const ContactUs: React.FC = () => {
                     placeholder="Enter your message"
                     value={formData.message}
                     onChange={handleInputChange}
+                    required
                   ></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={isLoading} className="submit-button">
+                  {isLoading ? (
+                    <>
+                      <LoadingIcon />
+                      Sending...
+                    </>
+                  ) : (
+                    "Submit"
+                  )}
+                </button>
               </form>
+              {submitError && <p className="error-message">{submitError}</p>}
             </div>
           )}
         </div>

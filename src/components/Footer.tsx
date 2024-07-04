@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <h3>Community</h3>
             <ul>
               <li><a href="/refer-a-friend">Refer a Friend - Get Bonus</a></li>
-              <li><a href="/">Blog</a></li>
+              {/* <li><a href="/">Blog</a></li> */}
             </ul>
           </div>
           <div className="footer-column">

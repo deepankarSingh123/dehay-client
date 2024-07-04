@@ -59,7 +59,7 @@ const App: React.FC = () => {
                   <Route path="/services" element={<Container><Services /></Container>} />
                   <Route path="/mobile-topup" element={<Container><MobileTopUpService /></Container>} />
                   <Route path="/balance" element={<Container><Balance /></Container>} />
-                  <Route path="/transactions" element={<Container><TransactionHistory /></Container>} />
+                  <Route path="/transaction-history" element={<Container><TransactionHistory /></Container>} />
                 </Routes>
                 <AppPromo />
                 <Footer />

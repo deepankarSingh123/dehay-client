@@ -404,12 +404,30 @@ p {
     height: 40px;
     margin: 10px 0;
   }
-  
-  .flag-image {
-    width: 25px;
-    height: 16px;
-    margin-right: 10px;
+  .selected-country {
+    width: 100%;
+    justify-content: center;
   }
+
+  .selected-countries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .flag-image {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 15px;
+  }
+  
+  .name {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
 
   .phone-image-right {
     width: 200px; /* Adjust width for smaller screens */

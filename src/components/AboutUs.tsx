@@ -23,7 +23,7 @@ const AboutUs: React.FC = () => {
           <br />
           We provide cheap international calls to mobiles and landlines, from anywhere in the world.
         </p>
-        <button className="about-signup-button">Signup</button>
+        {/* <button className="about-signup-button">Signup</button> */}
       </section>
 
       <section className="about-who-we-are">

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../css/Services.css";
-import nigeriaFlag from "../images/nigeria.png";
+import nigeriaFlag from "../images/Nigeria.png";
 import ghanaFlag from "../images/ghana.png";
 import indiaFlag from "../images/india.png";
 import jamaicaFlag from "../images/jamaica.png";
 import eritreaFlag from "../images/eritrea.png";
-import ethiopiaFlag from "../images/ethiopia.png";
+import ethiopiaFlag from "../images/Ethopia.png";
 import service1 from "../images/aboutus-internat.png"; // Example service image
 import service2 from "../images/aboutus-mobile.png"; // Example service image
 import appScreen from "../images/about-us-img2.png";
@@ -16,20 +16,16 @@ import faqIcon from "../images/faq.png";
 import callIcon from "../images/Call.png";
 import chatIcon from "../images/Chat Now.png";
 
-
 const countries = [
-  { name: "Nigeria", code: "+234", flag: "🇳🇬" },
-  { name: "Ghana", code: "+233", flag: "🇬🇭" },
-  { name: "India", code: "+91", flag: "🇮🇳" },
-  { name: "Jamaica", code: "+1", flag: "🇯🇲" },
-  { name: "Eritrea", code: "+291", flag: "🇪🇷" },
-  { name: "Ethiopia", code: "+251", flag: "🇪🇹" },
+  { name: "Nigeria", code: "+234", flag: nigeriaFlag },
+  { name: "Ghana", code: "+233", flag: ghanaFlag },
+  { name: "India", code: "+91", flag: indiaFlag },
+  { name: "Jamaica", code: "+1", flag: jamaicaFlag },
+  { name: "Eritrea", code: "+291", flag: eritreaFlag },
+  { name: "Ethiopia", code: "+251", flag: ethiopiaFlag },
 ];
 
-
-
 const Services: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
@@ -38,50 +34,45 @@ const Services: React.FC = () => {
     setIsExpanded(false);
   };
 
-  const handleToggle = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-
-  }
   return (
     <div className="services-page">
-      <header className="hero">
+      <div className="hero">
         <h1>Stay Connected Anywhere, Anytime</h1>
         <h2>International Calling Made Easy</h2>
         <p>Choose your destinations to see what we can offer</p>
-        <div className="expandable">
-        <button
-          className="expandable-btn"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {selectedCountry ? selectedCountry : "Select a Country ?"}
-        </button>
-        {isExpanded && (
-          <div className="expandable-content">
-            {countries.map((country) => (
-              <div
-                key={country.code}
-                className="expandable-item"
-                onClick={() =>
-                  handleCountryClick(`${country.flag} ${country.name}`)
-                }
-              >
-                <span className="flag">{country.flag}</span>
-                <span className="name">{country.name}</span>
-                <span className="code">{country.code}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-        <div className="country-flags">
-          <img src="nigeriaFlag" alt="Nigeria" />
-          <img src="ghanaFlag" alt="Ghana" />
-          <img src="indiaFlag" alt="India" />
-          <img src="jamaicaFlag" alt="Jamaica" />
-          <img src="eritreaFlag" alt="Eritrea" />
-          <img src="ethiopiaFlag" alt="Ethiopia" />
+
+        <div className="country-selector">
+          <button
+            className="country-select-btn"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {selectedCountry || "Select a Country ?"}
+          </button>
+          {isExpanded && (
+            <div className="country-dropdown">
+              {countries.map((country) => (
+                <div
+                  key={country.code}
+                  className="country-option"
+                  onClick={() => handleCountryClick(country.name)}
+                >
+                  <img src={country.flag} alt={`${country.name} flag`} />
+                  <span>{country.name}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      </header>
+
+        <div className="country-buttons">
+          {countries.map((country) => (
+            <button key={country.code} className="country-btn">
+              <img src={country.flag} alt={`${country.name} flag`} />
+              <span>{country.name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
       <section className="services-section">
         <h2>Our Services</h2>
         <div className="service-cards">

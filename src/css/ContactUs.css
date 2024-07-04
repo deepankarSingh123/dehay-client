@@ -196,19 +196,45 @@ button[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-button {
-  padding: 15px;
-  background-color: #662C90;
-  color: #ffffff;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
+.loading-icon {
+  animation: rotate 1s linear infinite;
 }
 
-button:hover {
-  background-color: #5a00b8;
+.loading-circle {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  50% {
+    stroke-dashoffset: 30;
+  }
+  100% {
+    stroke-dashoffset: 60;
+  }
+}
+
+/* Modify the existing button styles to accommodate the loading icon */
+button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (min-width: 768px) {

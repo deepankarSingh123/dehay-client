@@ -8,12 +8,12 @@ import qr from "../images/qr.png";
 import rates from "../images/Great Rates.png";
 import security from "../images/Simplicity and Security.png";
 import quality from "../images/Excellent quality.png";
-import vector1 from  "../images/Vector.png"
-import vector2 from  "../images/Vector (1).png"
-import vector3 from  "../images/Vector (2).png"
-import vector4 from  "../images/Vector (3).png"
-import vector5 from  "../images/Vector (4).png"
-import vector6 from  "../images/Vector (5).png"
+import vector1 from "../images/Vector.png";
+import vector2 from "../images/Vector (1).png";
+import vector3 from "../images/Vector (2).png";
+import vector4 from "../images/Vector (3).png";
+import vector5 from "../images/Vector (4).png";
+import vector6 from "../images/Vector (5).png";
 import { Link } from "react-router-dom";
 
 // Import flag images
@@ -73,29 +73,38 @@ const CountryInternationalCalling: React.FC = () => {
         Stay connected with your loved ones and get a $2 bonus when you create a
         new account with Dehay mobile.
       </p>
-      <div className="expandable">
+      <div className="country-selector">
         <button
-          className="expandable-btn"
+          className="country-select-btn"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          {selectedCountry ? selectedCountry : "Select a Country ?"}
+          {selectedCountry || "Select a Country ?"}
         </button>
         {isExpanded && (
-          <div className="expandable-content">
+          <div className="country-dropdown">
             {countries.map((country) => (
               <div
                 key={country.code}
-                className="expandable-item"
+                className="country-option"
                 onClick={() => handleCountryClick(country.name)}
               >
-                <img src={country.flag} alt={`${country.name} flag`} className="flag-image" />
-                <span className="name">{country.name}</span>
-                <span className="code">{country.code}</span>
+                <img src={country.flag} alt={`${country.name} flag`} />
+                <span>{country.name}</span>
+                <span className="country-code">{country.code}</span>
               </div>
             ))}
           </div>
         )}
       </div>
+      <div className="country-buttons">
+        {countries.map((country) => (
+          <button key={country.code} className="country-btn">
+            <img src={country.flag} alt={`${country.name} flag`} />
+            <span>{country.name}</span>
+          </button>
+        ))}
+      </div>
+
       <div className="app-section">
         <div className="app-info">
           <div className="app-header">
@@ -202,11 +211,7 @@ const CountryInternationalCalling: React.FC = () => {
         <h2>What Our Customers Say About Dehay Mobile App</h2>
         <div className="testimonials-cards">
           <div className="testimonial-card">
-            <img
-              src={vector1}
-              alt="Customer 1"
-              className="testimonial-img"
-            />
+            <img src={vector1} alt="Customer 1" className="testimonial-img" />
             <h3>John Jamees</h3>
             <div className="stars">★★★★★</div>
             <p>
@@ -215,11 +220,7 @@ const CountryInternationalCalling: React.FC = () => {
             </p>
           </div>
           <div className="testimonial-card">
-            <img
-              src={vector2}
-              alt="Customer 2"
-              className="testimonial-img"
-            />
+            <img src={vector2} alt="Customer 2" className="testimonial-img" />
             <h3>Theresa Webb</h3>
             <div className="stars">★★★★★</div>
             <p>
@@ -228,11 +229,7 @@ const CountryInternationalCalling: React.FC = () => {
             </p>
           </div>
           <div className="testimonial-card">
-            <img
-              src={vector3}
-              alt="Customer 3"
-              className="testimonial-img"
-            />
+            <img src={vector3} alt="Customer 3" className="testimonial-img" />
             <h3>Eleanor Pena</h3>
             <div className="stars">★★★★★</div>
             <p>
@@ -241,11 +238,7 @@ const CountryInternationalCalling: React.FC = () => {
             </p>
           </div>
           <div className="testimonial-card">
-            <img
-              src={vector4}
-              alt="Customer 4"
-              className="testimonial-img"
-            />
+            <img src={vector4} alt="Customer 4" className="testimonial-img" />
             <h3>Brooklyn Simmons</h3>
             <div className="stars">★★★★★</div>
             <p>
@@ -254,11 +247,7 @@ const CountryInternationalCalling: React.FC = () => {
             </p>
           </div>
           <div className="testimonial-card">
-            <img
-              src={vector5}
-              alt="Customer 5"
-              className="testimonial-img"
-            />
+            <img src={vector5} alt="Customer 5" className="testimonial-img" />
             <h3>Leslie Alexander</h3>
             <div className="stars">★★★★★</div>
             <p>
@@ -267,11 +256,7 @@ const CountryInternationalCalling: React.FC = () => {
             </p>
           </div>
           <div className="testimonial-card">
-            <img
-              src={vector6}
-              alt="Customer 6"
-              className="testimonial-img"
-            />
+            <img src={vector6} alt="Customer 6" className="testimonial-img" />
             <h3>Robert Fox</h3>
             <div className="stars">★★★★★</div>
             <p>
