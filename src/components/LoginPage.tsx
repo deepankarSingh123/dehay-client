@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
         'https://dehaymobile.app:4443/api/sendloginotp',
         new URLSearchParams({
           username: fullPhoneNumber,
-          sms_service_provider: 'fanytel'
+          sms_service_provider: 'twilio'
         }),
         {
           headers: {

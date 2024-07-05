@@ -54,7 +54,7 @@ const TransactionHistory: React.FC = () => {
             id: transaction.id,
             description: transaction.type,
             date: new Date(transaction.creationdate).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
-            amount: `${transaction.cost} CAD`,
+            amount: `${transaction.cost} USD`,
             status: transaction.type.includes('Success') ? 'Completed' : 'Declined',
           };
         });
